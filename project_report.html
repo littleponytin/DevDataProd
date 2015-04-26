@@ -66,15 +66,14 @@ img {
 <p>These are the files produced during a homework assignment of Coursera MOOC Developing Data Products from Johns Hopkins University, where students could pick any dataset, and should produce a web app hosted on SaaS platform from RStudio shinyapss.io.</p>
 <p>The data set that I choose was from Kaggle Titanic Challenge, since this is a starting point for many Machine Learning enthusiasts.</p>
 <p>The materials can be found in:</p>
-<p>Web app: <a href="https://littlepony.shinyapps.io/littlepony/" class="uri">https://littlepony.shinyapps.io/littlepony/</a></p>
+<p>Web app: <a href="https://littlepony.shinyapps.io/Titanic/" class="uri">https://littlepony.shinyapps.io/Titanic/</a></p>
 <p>GitHub Repo: <a href="https://github.com/littleponytin/DevDataProd" class="uri">https://github.com/littleponytin/DevDataProd</a></p>
 </div>
 <div id="code-for-plots" class="section level1">
 <h1>Code for plots</h1>
 <p>ggplot 2 Library was used for the plotting. Here is the code for a static view of the default plot that is rendered on the web app:</p>
 <pre class="r"><code>library(ggplot2)
-trainData &lt;- read.csv(
-url(&quot;http://s3-eu-west-1.amazonaws.com/dpadata/dataScience/train.csv&quot;))
+trainData &lt;- read.csv(url(&quot;http://s3-eu-west-1.amazonaws.com/dpadata/dataScience/train.csv&quot;))
 g &lt;- ggplot(trainData, aes(Age, Pclass))
 g + geom_point(aes(color=Sex)) + facet_grid(Survived ~.)</code></pre>
 <pre><code>## Warning in loop_apply(n, do.ply): Removed 125 rows containing missing

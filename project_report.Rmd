@@ -6,7 +6,7 @@ The data set that I choose was from Kaggle Titanic Challenge, since this is a st
 
 The materials can be found in:
 
-Web app: https://littlepony.shinyapps.io/littlepony/
+Web app: https://littlepony.shinyapps.io/Titanic/
 
 GitHub Repo: https://github.com/littleponytin/DevDataProd
 
@@ -15,8 +15,7 @@ ggplot 2 Library was used for the plotting. Here is the code for a static view o
 
 ``` {r code}
 library(ggplot2)
-trainData <- read.csv(
-url("http://s3-eu-west-1.amazonaws.com/dpadata/dataScience/train.csv"))
+trainData <- read.csv(url("http://s3-eu-west-1.amazonaws.com/dpadata/dataScience/train.csv"))
 g <- ggplot(trainData, aes(Age, Pclass))
 g + geom_point(aes(color=Sex)) + facet_grid(Survived ~.)
 ```
