@@ -11,7 +11,8 @@ shinyServer(
   function(input, output) {
     
     #Option to choose sample size
-    dataset <- reactive(function() {
+    #dataset <- reactive(function() {
+    dataset <- reactive({
       trainData[sample(nrow(trainData), input$sampleSize), ]
     })
     
@@ -28,8 +29,8 @@ shinyServer(
     }, options = list(bSortClasses = TRUE))
     
     #Draw ggplot based/reactive on user input
-    output$plot <- reactivePlot(function() {
-      
+    #output$plot <- reactivePlot(function() {
+    output$plot <- renderPlot(function() {  
       #p <- ggplot(dataset(), aes_string(x=input$x, y=input$y)) + geom_point()
       p <- ggplot(data = dataset, aes_string(x=input$x, y=input$y)) + geom_point()
       
