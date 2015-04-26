@@ -31,7 +31,7 @@ shinyServer(
     output$plot <- reactivePlot(function() {
       
       #p <- ggplot(dataset(), aes_string(x=input$x, y=input$y)) + geom_point()
-      p <- ggplot(dataset, aes_string(x=input$x, y=input$y)) + geom_point()
+      p <- ggplot(dataset = dataset, aes_string(x=input$x, y=input$y)) + geom_point()
       
       if (input$color != 'None') 
         p <- p + aes_string(color=input$color)
