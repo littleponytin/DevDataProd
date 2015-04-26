@@ -1,6 +1,5 @@
 library(shiny)
-
-#For ggplot2 Graphics Library
+library(RCurl)
 library(ggplot2)
 
 trainData <- read.csv("./data/train.csv")

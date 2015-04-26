@@ -1,5 +1,6 @@
 library(shiny)
 library(ggplot2)
+library(RCurl)
 
 trainData <- read.csv("./data/train.csv")
 
@@ -7,12 +8,7 @@ dataset <- trainData
 
 
 shinyUI(fluidPage(
-  navbarPage("Developing Data Products"
-             # navbarMenu("Links ",
-             #   		tabPanel$a(href = "https://www.kaggle.com/c/titanic-gettingStarted", "Kaggle Titanic Challenge"),
-             #   		tabPanel("Table")
-             #   	)
-  ),
+  navbarPage("Developing Data Products"),
   titlePanel("Kaggle's Titanic Challenge"),
   sidebarLayout(
     sidebarPanel(
@@ -74,7 +70,6 @@ shinyUI(fluidPage(
       p('Please note that this is a very basic App intended to provide some introductory exploratory analysis.'),
       p("It uses solely the training dataset on Kaggle's Titanic challenge, which you can download here, or on Kaggle's page:"),
       a("https://www.kaggle.com/c/titanic-gettingStarted"),
-      #img(src ="./figures/titanic.png", height = 200, width = 200),
       h4('Getting Started with this Web App'),
       p('On the side panel you can change the variables that are injected to the plot (from ggplot2 library).'),
       p('You can change which variable go the the X-axis, Y-axis, color by variable, and include jitter, smooth, and row/column facets.'),
