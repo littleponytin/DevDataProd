@@ -1,4 +1,3 @@
-#ui.R
 library(shiny)
 library(ggplot2)
 
@@ -14,7 +13,7 @@ shinyUI(fluidPage(
              #   		tabPanel("Table")
              #   	)
   ),
-  titlePanel("Introduce Kaggle's Titanic Challenge"),
+  titlePanel("Kaggle's Titanic Challenge"),
   sidebarLayout(
     sidebarPanel(
       
@@ -38,7 +37,7 @@ shinyUI(fluidPage(
       tags$ul(
         tags$li('survival - Survival (0 = No; 1 = Yes)'),
         tags$li('pclass - Passenger Class (1 = 1st; 2 = 2nd; 3 = 3rd)'),
-        tags$li('name1 - Name'),
+        tags$li('name - Name'),
         tags$li('sex - Sex'),
         tags$li('age - Age'),
         tags$li('sibsp - Number of Siblings/Spouses Aboard'),
