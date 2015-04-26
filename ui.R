@@ -2,7 +2,7 @@
 library(shiny)
 library(ggplot2)
 
-trainData <- read.csv("./train.csv")
+trainData <- read.csv("./data/train.csv")
 
 dataset <- trainData
 

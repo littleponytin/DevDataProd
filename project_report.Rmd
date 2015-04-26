@@ -8,7 +8,7 @@ The materials can be found in:
 
 Web app: https://littlepony.shinyapps.io/littlepony/
 
-GitHub Repo: https://github.com/littlepony/titanicShinyApp
+GitHub Repo: https://github.com/littleponytin/DevDataProd
 
 # Code for plots
 ggplot 2 Library was used for the plotting. Here is the code for a static view of the default plot that is rendered on the web app:
@@ -31,7 +31,7 @@ Install the necessary packages to run RStudio Shiny Server locally. Please view 
 
 Run the following command in the RStudio:
 
-runGitHub("titanicShinyApp", "littlepony")
+runGitHub("DevDataProd", "littleponytin")
 
 
 # For more information
@@ -40,5 +40,3 @@ For more information about the several MOOCs comprised in this Specialization, p
 For more information about RStudio Shinyapps.io visit: http://shiny.rstudio.com/articles/shinyapps.html
 
 For more information about Kaggle Titanic challenge visit: https://www.kaggle.com/c/titanic-gettingStarted
-
-Last but not least, if you are getting started with this challenge and R, here is a great tutorial from Trevor Stephens that inspired me to create this repo: http://trevorstephens.com/post/72916401642/titanic-getting-started-with
