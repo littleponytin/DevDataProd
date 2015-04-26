@@ -1,6 +1,6 @@
 #ui.R
 library(shiny)
-library(ggplot)
+library(ggplot2)
 
 trainData <- read.csv("./data/train.csv")
 
